@@ -19,7 +19,7 @@ public class CalculaNominas{
     public static void main(String[] args) {
 
             CalculaNominas c = new CalculaNominas();
-            Empleado empl1 = new Empleado("James Cosling","32000032G",'m',4,-7);
+            Empleado empl1 = new Empleado("James Cosling","32000032G",'m',11,7);
             Empleado empl2 = new Empleado("Ada Lovelace","32000031R",'F');
             Nomina sueldo = new Nomina();
             c.escribe(empl1,sueldo);

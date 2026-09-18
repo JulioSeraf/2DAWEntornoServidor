@@ -12,6 +12,7 @@ public class Empleado extends Persona {
         super(nombre, dni, sexo);
        try {
            if(anyos < 0) throw new DatosNoCorrectosException("Datos no correctos, Años invalido!");
+           if(categoria < 0 || categoria > 10) throw new DatosNoCorrectosException("Categoria incorrecto!");
            this.categoria = categoria;
            this.anyos = anyos;
        }catch(DatosNoCorrectosException e){
