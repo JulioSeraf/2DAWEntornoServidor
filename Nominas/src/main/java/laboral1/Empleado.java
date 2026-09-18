@@ -2,13 +2,12 @@ package laboral1;
 public class Empleado extends Persona {
     private int categoria;
     public int anyos;
-
     public Empleado(String nombre, String dni, char sexo) {
         super(nombre, dni, sexo);
         categoria = 1;
         anyos = 0;
     }
-    public Empleado(String nombre, String dni, char sexo, int categoria, int anyos) throws DatosNoCorrectosException {
+    public Empleado(String nombre, String dni, char sexo, int categoria, int anyos) {
         super(nombre, dni, sexo);
        try {
            if(anyos < 0) throw new DatosNoCorrectosException("Datos no correctos, Años invalido!");
