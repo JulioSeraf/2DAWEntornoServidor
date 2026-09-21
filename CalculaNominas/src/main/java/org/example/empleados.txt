@@ -1,0 +1,6 @@
+nombre: pedro sachez, dni: 9237827L,sexo: M, edad: 19
+nombre: carlos pepe, dni: 9843834L,sexo: M, edad: 100
+nombre: Larissa carla, dni: 922227L,sexo: f, edad: 12
+nombre: EDU bear, dni: 9237827L,sexo: M, edad: 14
+nombre: Lucia suduku, dni: 923337L,sexo: f, edad: 16
+nombre: martin Delegado, dni: 9237827L,sexo: M, edad: 27
