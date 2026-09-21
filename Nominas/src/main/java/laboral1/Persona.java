@@ -16,9 +16,18 @@ public class Persona {
         this.sexo = sexo;
 
     }
+
+    /**
+     * Cambia valor de edad
+     * @param edad
+     */
     public void setEdad(int edad) {
         this.dni = dni;
     }
+
+    /**
+     * Imprime info de Persona(nombre y Dni)
+     */
     public void Imprime() {
         System.out.printf("""
                 Nombre: %s

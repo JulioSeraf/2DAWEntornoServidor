@@ -14,4 +14,27 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <build>
+        <plugins>
+            <!-- Plugin para generar Javadoc compatible con Java 25 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.11.2</version>
+                <configuration>
+                    <show>private</show> <!-- Incluye hasta métodos privados en la documentación -->
+                    <failOnError>false</failOnError> <!-- Evita que el build falle si hay errores menores de formato -->
+                    <release>25</release> <!-- Asegura que el generador entienda la sintaxis de Java 25 -->
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal> <!-- Genera el archivo .jar de Javadoc automáticamente al compilar -->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>
