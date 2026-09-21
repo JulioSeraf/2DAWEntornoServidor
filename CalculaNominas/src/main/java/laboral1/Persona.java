@@ -11,14 +11,28 @@ public class Persona {
         this.sexo = sexo;
     }
 
+    /**
+     *
+     * @param nombre
+     * @param sexo
+     */
     public Persona(String nombre, char sexo) {
         this.nombre = nombre;
         this.sexo = sexo;
 
     }
+
+    /**
+     *
+     * @param edad
+     */
     public void setEdad(int edad) {
         this.dni = dni;
     }
+
+    /**
+     * imprime datos de persona
+     */
     public void Imprime() {
         System.out.printf("""
                 Nombre: %s

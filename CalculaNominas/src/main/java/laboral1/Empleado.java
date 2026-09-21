@@ -19,17 +19,36 @@ public class Empleado extends Persona {
        }
 
     }
+
+    /**
+     *
+     * @return Categoria
+     */
     public int getCategoria() {
         return categoria;
     }
 
+    /**
+     * Cambia valor de categoria o salta error si no es valida
+     * @param categoria
+     * @throws DatosNoCorrectosException
+     */
     public void setCategoria(int categoria) throws  DatosNoCorrectosException {
         if (categoria < 0 || categoria > 10) throw new DatosNoCorrectosException("El categoria no es valido");
         this.categoria = categoria;
     }
+
+    /**
+     *  incrementa anios
+     * @param anios
+     */
     public void incAnyos(int anios) {
         this.anyos += anios;
     }
+
+    /**
+     * imprime datos de empleados
+     */
     public void imprime() {
         super.Imprime();
         System.out.printf("""
