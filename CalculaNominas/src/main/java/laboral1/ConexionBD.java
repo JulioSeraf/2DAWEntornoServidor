@@ -11,7 +11,7 @@ public class ConexionBD {
             if(conexion != null){
                 System.out.println("conexion exitosa!");
             }
-
+            reConection = conexion;
         }catch(Exception e){
             System.out.println(e.getMessage());
         }

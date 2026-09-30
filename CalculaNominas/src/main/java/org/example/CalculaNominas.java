@@ -19,9 +19,9 @@ public class CalculaNominas {
         System.out.printf("=============================\nSueldo: %d \n\n", sueldo.sueldo(empl));
     }
     public void writeText(String ruta, String line){
-        StringBuilder text = new StringBuilder();
         try(BufferedWriter br = new BufferedWriter(new FileWriter(ruta,true))){
             br.write(line);
+            br.newLine();
         }catch(IOException e){
             System.out.println("Error:"+ e.getMessage());
         }
