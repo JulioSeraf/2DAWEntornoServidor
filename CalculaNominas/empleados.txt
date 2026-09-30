@@ -18,3 +18,13 @@
 >nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL
 >nombre:James casling, dni:32000032G,sexo:M,edad = 11 
 >nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL
+>nombre:James casling, dni:32000032G,sexo:M,edad = 11 
+>nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL
+>nombre:James casling, dni:32000032G,sexo:M,edad = 11 
+>nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL
+>nombre:James casling, dni:32000032G,sexo:M,edad = 11 
+>nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL
+>nombre:James casling, dni:32000032G,sexo:M,edad = 11 
+>nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL
+>nombre:James casling, dni:32000032G,sexo:M,edad = 11 
+>nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL

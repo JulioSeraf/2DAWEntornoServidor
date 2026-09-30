@@ -19,6 +19,7 @@ public class CalculaNominas {
         System.out.printf("=============================\nSueldo: %d \n\n", sueldo.sueldo(empl));
     }
     public void writeText(String ruta, String line){
+        StringBuilder text = new StringBuilder();
         try(BufferedWriter br = new BufferedWriter(new FileWriter(ruta,true))){
             br.write(line);
             br.newLine();
@@ -44,7 +45,6 @@ public class CalculaNominas {
 
     public static void main(String[] args) {
         CalculaNominas c = new CalculaNominas();
-        ConexionBD cBD = new ConexionBD();
         c.writeText("empleados.txt",">nombre:James casling, dni:32000032G,sexo:M,edad = 11 ");
         c.writeText("empleados.txt",">nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL");
 
@@ -63,8 +63,12 @@ public class CalculaNominas {
         empl1.setCategoria(9);
         c.escribe(empl1, sueldo);
         c.escribe(empl2, sueldo);
-        String sql = "select p.nombre,e.anyos,p.sexo, p.dni, e.categoria from empleado e join persona p on e.id_empl = p.id_empleado;";
 
+        // Conexion a la base de datos ===========================================
+        ConexionBD cBD = new ConexionBD();
+        String sql = "select p.nombre,e.anyos,p.sexo, p.dni, e.categoria from empleado e join persona p on e.id_empl = p.id_empleado";
+
+        // Recorriendo Select ================================
         try(PreparedStatement stb = cBD.conexion().prepareStatement(sql);
             ResultSet res = stb.executeQuery()){
             while(res.next()){
@@ -74,12 +78,16 @@ public class CalculaNominas {
                 String sexo = res.getString("sexo");
                 int categoria = res.getInt("categoria");
 
-                System.out.printf("Nombre: %s - años: %d - Dni: %s - Sexo: %s - Categoria: %s ", nombre,anyos,dni,sexo,categoria);
+                System.out.printf("Nombre: %s - años: %d - Dni: %s - Sexo: %s - Categoria: %s \n", nombre,anyos,dni,sexo,categoria);
             }
         }catch (SQLException e){
             System.out.println(e.getMessage());
         }
 
+        try(PreparedStatement stb = cBD.conexion().prepareStatement()){
 
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
     }
 }

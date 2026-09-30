@@ -7,11 +7,11 @@ public class ConexionBD {
 
     public Connection conexion(){
         Connection reConection = null;
-        try(Connection conexion = DriverManager.getConnection(this.ruta,this.user,this.password)){
-            if(conexion != null){
+        try{
+            reConection = DriverManager.getConnection(this.ruta,this.user,this.password);
+            if(reConection != null){
                 System.out.println("conexion exitosa!");
             }
-            reConection = conexion;
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
