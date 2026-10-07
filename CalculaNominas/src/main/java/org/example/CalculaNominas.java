@@ -92,6 +92,7 @@ public class CalculaNominas {
                 2 -> Añadir empleado
                 3 -> Mostrar sueldo
                 4 -> Editar empleado
+                5 -> Copia de seguridad
                 """);
         int opciones = sc.nextInt();
         switch (opciones){
@@ -270,6 +271,30 @@ public class CalculaNominas {
                 }
 
             }
+            break;
+            case 5:{
+                String sql = "select p.nombre,e.anyos,p.sexo, p.dni, e.categoria, e.id_empl from empleado e join persona p on e.id_empl = p.id_empleado";
+
+                // Recorriendo Select ================================
+                try(PreparedStatement stb = cBD.conexion().prepareStatement(sql);
+                    ResultSet res = stb.executeQuery()){
+                    while(res.next()){
+                        int id = res.getInt("id_empl");
+                        String nombre = res.getNString("nombre" );
+                        String dni = res.getNString("dni");
+                        int anyos = res.getInt("anyos");
+                        String sexo = res.getString("sexo");
+                        int categoria = res.getInt("categoria");
+                        c.writeText("empleados.txt",">nombre: " +nombre +", dni:" + dni +",sexo:" + sexo +",edad:" + anyos);
+                    }
+                    System.out.printf("Copia Guardada con exito!!");
+                }catch (SQLException e){
+                    System.out.println(e.getMessage());
+                }
+
+
+            }
+
         }
 
     }

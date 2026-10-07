@@ -6,3 +6,4 @@
 >nombre: martin Delegado, dni:9237827L,sexo: M, edad: 27
 >nombre:James casling, dni:32000032G,sexo:M,edad = 11 
 >nombre:Ada Lovelace, dni:32000031R,sexo:F,edad = NULL
+
