@@ -5,6 +5,9 @@ public class ConexionBD {
     String user = "root";
     String password = "";
 
+    /**
+     * @return Conexion
+     */
     public Connection conexion(){
         Connection reConection = null;
         try{

@@ -71,6 +71,6 @@ public class Empleado extends Persona {
     Edad: %d
     Dni: %d
     Sexo: %S
-   """,anyos,categoria,sexo);
+    """,anyos,categoria,sexo);
     }
 }
